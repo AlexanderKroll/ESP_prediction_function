@@ -4,6 +4,7 @@ This repository contains an easy-to-use Python function for the ESP prediction m
 
 ## Downloading data folder
 Before you can run the ESP prediction function, you need to [download and unzip a data folder from Zenodo](https://doi.org/10.5281/zenodo.7981153). Afterwards, this repository should have the following strcuture:
+
     ├── code                   
     ├── data                    
     └── README.md
