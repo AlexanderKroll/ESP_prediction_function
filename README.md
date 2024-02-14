@@ -23,17 +23,15 @@ There is a Jupyter notebook "Tutorial ESP prediction.ipynb" in the folder "code"
 - fair-esm 0.4.0
 - py-xgboost 1.3.3
 
-The listed packages can be installed using conda and anaconda:
+The listed packages can be installed using micromamba (or conda or anaconda) and pip as follows:
 
 ```bash
-pip install pandas==1.3.1
-pip install torch==1.12.1
-pip install numpy==1.23.1
-pip install fair-esm==0.4.0
-conda install -c conda-forge py-xgboost=1.3.3
-conda install -c rdkit rdkit=2022.09.5
+micromamba create -n esp -c conda-forge pandas==1.3.1 python=3.8 jupyter  numpy==1.23.1 fair-esm==0.4.0 py-xgboost=1.3.3 rdkit=2022.09.5
+micromamba activate esp
+micromamba remove py-xgboost
+pip install xgboost
 ```
-
+You can use `conda` instead of `micromamba`. This method is tested on Macbook pro 2021 Intel Chip on 14.02.2024.
 
 ## Problems/Questions
 If you face any issues or problems, please open an issue.
