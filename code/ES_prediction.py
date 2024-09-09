@@ -55,7 +55,7 @@ def merging_metabolite_and_enzyme_df(df_met, df_enzyme, df_ES):
 		except:
 			gnn_rep, esm1b_rep = "", ""
 
-		if gnn_rep == "" or esm1b_rep == "" or df_ES["enzyme"][ind] == "":
+		if isinstance(gnn_rep, str) or isinstance(esm1b_rep, str) or isinstance(df_ES["enzyme"][ind], str):
 			df_ES["complete"][ind] = False
 		else:
 			df_ES["GNN FP"][ind] = gnn_rep
